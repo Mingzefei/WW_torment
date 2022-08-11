@@ -92,8 +92,6 @@ Powershell 中执行`wsl --export <system_name> <path>\<outfile_name>`。
 
 部分功能，如锚定符，不能使用。
 
- #TODO: modify vimrc.vscode
-
 - Powershell 配置
 
 使用 choco 安装 git、nvim，及 nvim 插件。
@@ -104,9 +102,42 @@ nvim.coc 存在问题，不能正常使用。
 
 ```bat
 nvim $PROFILE
-
-# using
+" using
 function xx {XXX}
 ```
 
- #TODO: modify ~/AppData/Local/nvim/init.vim for nvim.coc
+### 20220810
+
+- Powershell 配置
+
+使用 ![lf](https://github.com/gokcehan/lf) 代替 ranger，为此安装了 GO。
+
+nvim.coc 基本使用正常，向配置文件中添加部分推荐配置。
+
+在 dotfiles 仓库中添加了 nvim/win.nvim，用于保存 win10 下 nvim 配置文件。
+
+设置 GitHub 仅 pull 部分目录。
+
+设置 win10 下的软链接，将 init.vim 和 coc-settings.json 绑定到相应位置。
+
+- WSL2 nvim 安装和配置
+
+安装 nvim 及 nvim.coc 插件。
+
+由于 vim 和 nvim 版本过低，coc 插件无法运行，遂更新。
+
+### 20220811
+
+- WSL2 nvim.coc 配置
+
+完成了主要配置，基本满足正常使用。
+
+相关配置见 ![dotfile.nvim](https://github.com/Mingzefei/dotfiles/tree/master/nvim)。
+
+ #TODO: 整理、统一 init.vim、vimrc
+
+- Win10 输入法 BUG
+
+莫名地在中英文之间切换，时间原因暂不修改，如不能修复考虑更换输入法。
+
+ #TODO: win10, 输入法 BUG
