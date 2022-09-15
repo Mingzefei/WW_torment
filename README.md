@@ -159,3 +159,21 @@ nvim.coc 基本使用正常，向配置文件中添加部分推荐配置。
 ```
 
 解决方法：`netsh winsock reset` 重启
+
+### 20220915
+
+- latex 编译
+
+使用 `xelatex -interaction=nonstopmode xxx.tex` 忽略编译过程中的交互输入
+
+使用 `\usepackage{pdfpages}` 和 `\includepdf[page=-]{./path.file.pdf}` 插入外部 pdf 文件
+
+使用 `\includepdfset{pagecommand={\thispagestyle{fancy}}}` 对插入的外部 pdf 添加页码
+
+使用 `\includepdf[addtotoc={<pages>,<section>,<level>,<heading>,<label>},pages=-]{./path/file.pdf}` 记录在目录中
+
+参考 [pdfpages 手册](http://www.ctan.org/tex-archive/macros/latex/contrib/pdfpages/pdfpages.pdf)
+
+- WSL2 中 .ipynb 脚本找不到文件
+
+解决方法：在 WSL2 中加入环境变量，再 code 或其他方式打开 .pynb 文件
