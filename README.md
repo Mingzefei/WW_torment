@@ -177,3 +177,15 @@ nvim.coc 基本使用正常，向配置文件中添加部分推荐配置。
 - WSL2 中 .ipynb 脚本找不到文件
 
 解决方法：在 WSL2 中加入环境变量，再 code 或其他方式打开 .pynb 文件
+
+### 20221116
+
+- github token 设置
+
+在 Developer settings 中生成 tokens，在终端添加现有 url
+
+```
+git remote set-url origin  https://<your_token>@github.com/<USERNAME>/<REPO>.git
+```
+
+>_<
