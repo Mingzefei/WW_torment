@@ -188,4 +188,15 @@ nvim.coc 基本使用正常，向配置文件中添加部分推荐配置。
 git remote set-url origin  https://<your_token>@github.com/<USERNAME>/<REPO>.git
 ```
 
->_<
+### 20230321
+
+- 设置 VScode 代理
+
+在 WSL2 的终端使用 `code .` 可以直接用 Win 中的 VScode 打开当前目录（需要在 VScode 上配置好 WSL2）。
+但是，需要在 VScode 中手动设置代理，用如下命令实现。
+```bash
+hostip=$(awk '/nameserver / {print $2;}' /etc/resolv.conf 2>/dev/null)
+sed -i "s/http\.proxy.*/http.proxy\":\"http:\/\/$hostip:<your_port>\",/" \
+    /mnt/c/Users/<your_username>/AppData/Roaming/Code/User/settings.json
+```
+可以将上述内容写入 `~/.zshrc` 或 `~/.bashrc` 以实现自动。 
