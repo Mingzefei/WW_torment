@@ -208,3 +208,12 @@ sed -i "s/http\.proxy.*/http.proxy\":\"http:\/\/$hostip:<your_port>\",/" \
 安装过程参考 ![Windows11 + WSL Ubuntu + Pycharm + Conda for deeplearning](https://www.gongsunqi.xyz/posts/3c995b2a/)。
 
 不同系统下的性能对比参考 ![深度学习：Windows11 VS WSL2 VS Ubuntu 性能对比，pytorch2.0性能测试！](https://www.gongsunqi.xyz/posts/3c995b2a/)。
+
+- 在 WSL2 中挂载移动硬盘
+
+```bash
+sudo mount -t drvfs F: /mnt/f
+#取消挂载为
+sudo umount /mnt/f
+```
+
