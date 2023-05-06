@@ -199,4 +199,12 @@ hostip=$(awk '/nameserver / {print $2;}' /etc/resolv.conf 2>/dev/null)
 sed -i "s/http\.proxy.*/http.proxy\":\"http:\/\/$hostip:<your_port>\",/" \
     /mnt/c/Users/<your_username>/AppData/Roaming/Code/User/settings.json
 ```
-可以将上述内容写入 `~/.zshrc` 或 `~/.bashrc` 以实现自动。 
+可以将上述内容写入 `~/.zshrc` 或 `~/.bashrc` 以实现自动。
+
+### 20230506
+
+- 在 WSL2 中使用 GPU
+
+安装过程参考 ![Windows11 + WSL Ubuntu + Pycharm + Conda for deeplearning](https://www.gongsunqi.xyz/posts/3c995b2a/)。
+
+不同系统下的性能对比参考 ![深度学习：Windows11 VS WSL2 VS Ubuntu 性能对比，pytorch2.0性能测试！](https://www.gongsunqi.xyz/posts/3c995b2a/)。
